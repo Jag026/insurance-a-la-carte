@@ -10,7 +10,7 @@ module.exports = {
         companyName: 'Bohemith Title'
       },
       {
-        name: 'Gold Silver Platinum Coverage',
+        name: 'Gold Silver Coverage',
         premium: 400,
         description: 'A policy that sounds good bc it"s" name after metals',
         companyName: 'Bronze Standard Insurance'
@@ -21,7 +21,7 @@ module.exports = {
   down: async (queryInterface, Sequelize) => {
     const Op = Sequelize.Op;
     return queryInterface.bulkDelete('Policies', {
-      username: { [Op.in]: ['Bohemith Plus', 'Gold Silver Platinum Coverage'] }
+      name: { [Op.in]: ['Bohemith Plus', 'Gold Silver Coverage'] }
     }, {});
   }
 };
